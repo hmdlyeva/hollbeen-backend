@@ -21,7 +21,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://hollbeen-backend.onrender.com",
+        url: "http://hollbeen-backend.vercel.app",
       },
     ],
   },

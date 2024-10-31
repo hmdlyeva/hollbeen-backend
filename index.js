@@ -5,7 +5,14 @@ require("./src/config/db");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 const cors = require("cors");
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:3000", "http://hollbeen-backend.onrender.com"],
+  methods: ["GET", "POST", "PUT", "DELETE"], 
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 // Swagger setup
 const swaggerJsDoc = require("swagger-jsdoc");
